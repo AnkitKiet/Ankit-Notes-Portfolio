@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Senior Backend Engineer portfolio"
+    />
+    <title>Senior Backend Engineer · Portfolio</title>
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+      <div id="siteHeader"></div>
+
+      <main id="top">
+        <!-- HERO -->
+        <section class="container hero">
+          <div class="row align-items-start gy-4">
+            <div class="col-lg-12">
+              <span class="kicker">
+                <span class="grad-text">8+ years</span>
+                <span class="meta">· Senior Backend Engineer</span>
+              </span>
+              <h1 class="headline">
+                <span class="grad-text">Ankit Maurya</span><br />
+                Distributed systems, AI and architecture learnings
+              </h1>
+              <div class="bio glass-card p-4 mt-3">
+
+                <ul class="bio-list">
+              
+                  <li>
+                    <strong>Backend engineer</strong> focused on solving complex problems by building
+                    scalable, reliable <span class="highlight">distributed systems</span>.
+                    Experience across e-commerce, payments, and banking with high-throughput,
+                    low-latency production systems.
+                  </li>
+              
+                  <li>
+                    At <strong>Walmart</strong>, leading backend development for large-scale pricing
+                    and fulfillment systems. Built a distributed rule-engine and re-architected
+                    the platform into scalable microservices handling
+                    <span class="highlight">millions of requests per minute</span>.
+                  </li>
+              
+                  <li>
+                    Previously at <strong>Global Payments</strong> and <strong>Newgen</strong>,
+                    worked on real-time IVR automation and enterprise banking platforms,
+                    focusing on event-driven architectures, data systems, and reliability at scale.
+                  </li>
+              
+                  <li>
+                    Currently building <span class="highlight">production-grade GenAI applications</span>
+                    and <span class="highlight">AI agents</span>, integrating intelligent systems into
+                    backend architectures in a scalable and practical way.
+                  </li>
+              
+                  <li>
+                    Core focus on <strong>AI and distributed system design</strong>, scalability, and backend
+                    architecture—approaching problems from first principles with emphasis on
+                    trade-offs, system behavior, and long-term maintainability.
+                  </li>
+              
+                  <li>
+                    Open to conversations around building and scaling meaningful software systems.
+                  </li>
+              
+                </ul>
+              
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <a class="btn btn-primary btn-lg px-4" href="resume.pdf" target="_blank" rel="noopener">
+                  Resume
+                </a>
+                <button class="btn btn-ghost btn-lg px-4" type="button" data-bs-toggle="modal" data-bs-target="#modalTimeline">
+                  Job timeline
+                </button>
+                <a class="btn btn-ghost btn-lg px-4" href="#contact">Contact</a>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="d-flex flex-wrap gap-2">
+                <span class="chip">Distributed systems</span>
+                <span class="chip">Event-driven architecture</span>
+                <span class="chip">Reactive Systems</span>
+                <span class="chip">Kafka / Streaming</span>
+                <span class="chip">Cassandra / NoSQL</span>
+                <span class="chip">Caching strategies</span>
+                <span class="chip">Low latency systems</span>
+                <span class="chip">Fault tolerance</span>
+                <span class="chip">Observability</span>
+                <span class="chip">AI agents</span>
+                <span class="chip">RAG systems</span>
+                <span class="chip">LLMOps</span>
+                <span class="chip">Vector search</span>
+                <span class="chip">Prompt Engineering</span>
+                <span class="chip">Finetuning</span>
+                <span class="chip">Cloud (AWS, GCP)</span>
+                <span class="chip">Problem Solving</span>
+                <span class="chip">System Design</span>
+                <span class="chip">Data Structures</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEARNINGS (MOST IMPORTANT) -->
+        <section id="learnings" class="container section">
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+            <div>
+              <h2 class="section-title">Engineering learnings from production</h2>
+              <p class="section-subtitle">
+                These insights are drawn from my production experience shaped by working alongside some of the best engineering minds in the industry.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="learnings.html" aria-label="View all learnings (future page)">
+              View all learnings
+            </a>
+          </div>
+
+          <div class="row g-3">
+            <!-- Learning 1 -->
+            <div class="col-12 col-md-6">
+              <div
+                class="glass-card hover-lift p-4 learning-card h-100"
+                role="button"
+                tabindex="0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalKafkaPartitioning"
+                aria-label="Open Kafka partitioning modal"
+              >
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="chip">Kafka</div>
+                  <div class="meta">Ordering · Throughput · Hot keys</div>
+                </div>
+                <h3 class="h5 fw-bold mb-2">Partitioning is a product decision.</h3>
+                <p class="mb-0 text-secondary">
+                  Your key choice defines ordering guarantees, consumer parallelism, backfills, and what “correctness” means under load.
+                </p>
+              </div>
+            </div>
+
+            <!-- Learning 2 -->
+            <div class="col-12 col-md-6">
+              <div
+                class="glass-card hover-lift p-4 learning-card h-100"
+                role="button"
+                tabindex="0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalCassandraModeling"
+                aria-label="Open Cassandra modeling modal"
+              >
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="chip">Cassandra</div>
+                  <div class="meta">Query-first · Compaction · Tombstones</div>
+                </div>
+                <h3 class="h5 fw-bold mb-2">Model for reads; pay for mistakes later.</h3>
+                <p class="mb-0 text-secondary">
+                  Cassandra rewards predictable access paths and punishes “flexible queries” with hotspots, tombstones, and slow repairs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Learning 3 -->
+            <div class="col-12 col-md-6">
+              <div
+                class="glass-card hover-lift p-4 learning-card h-100"
+                role="button"
+                tabindex="0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalCaching"
+                aria-label="Open caching strategies modal"
+              >
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="chip">Caching</div>
+                  <div class="meta">Staleness · Stampedes · Invalidation</div>
+                </div>
+                <h3 class="h5 fw-bold mb-2">Cache correctness is a spectrum.</h3>
+                <p class="mb-0 text-secondary">
+                  Choose bounded staleness and predictable failure modes over “perfect invalidation” that becomes operational debt.
+                </p>
+              </div>
+            </div>
+
+            <!-- Learning 4 -->
+            <div class="col-12 col-md-6">
+              <div
+                class="glass-card hover-lift p-4 learning-card h-100"
+                role="button"
+                tabindex="0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalAsyncPipelines"
+                aria-label="Open async pipelines modal"
+              >
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="chip">Pipelines</div>
+                  <div class="meta">Retries · Idempotency · Backpressure</div>
+                </div>
+                <h3 class="h5 fw-bold mb-2">Async systems need “replay safety.”</h3>
+                <p class="mb-0 text-secondary">
+                  Retries happen. Make handlers idempotent, encode dedupe, and expose backpressure before latency becomes an outage.
+                </p>
+              </div>
+            </div>
+
+            <!-- Learning 5 -->
+            <div class="col-12 col-md-6">
+              <div
+                class="glass-card hover-lift p-4 learning-card h-100"
+                role="button"
+                tabindex="0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSLOs"
+                aria-label="Open SLOs and reliability modal"
+              >
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="chip">Reliability</div>
+                  <div class="meta">SLOs · Error budgets · Triage</div>
+                </div>
+                <h3 class="h5 fw-bold mb-2">SLOs prevent “alert-driven” engineering.</h3>
+                <p class="mb-0 text-secondary">
+                  Define what matters to users, then pick signals that explain failures. Everything else becomes noise and burnout.
+                </p>
+              </div>
+            </div>
+
+            <!-- Learning 6 -->
+            <div class="col-12 col-md-6">
+              <div
+                class="glass-card hover-lift p-4 learning-card h-100"
+                role="button"
+                tabindex="0"
+                data-bs-toggle="modal"
+                data-bs-target="#modalDataConsistency"
+                aria-label="Open data consistency modal"
+              >
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                  <div class="chip">Data</div>
+                  <div class="meta">Consistency · Reconciliation · Audits</div>
+                </div>
+                <h3 class="h5 fw-bold mb-2">Consistency is a workflow, not a toggle.</h3>
+                <p class="mb-0 text-secondary">
+                  Use invariants, audits, and repair tools. The safest distributed system assumes partial failure and drift.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RESEARCH PAPERS -->
+        <section id="papers" class="container section">
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+            <div>
+              <h2 class="section-title">Research papers I read</h2>
+              <p class="section-subtitle">
+                Papers that have shaped my understanding of distributed systems and AI.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="papers.html" aria-label="View all research papers">
+              View all papers
+            </a>
+          </div>
+
+          <div id="papersGrid" class="row g-3"></div>
+        </section>
+
+        <!-- PROJECTS / SYSTEMS -->
+        <section id="projects" class="container section">
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+            <div>
+              <h2 class="section-title">Projects &amp; systems</h2>
+              <p class="section-subtitle">
+                Learning Projects to understand distributed systems and AI.
+              </p>
+            </div>
+            <a class="btn btn-ghost" href="projects.html" aria-label="View all projects and systems">
+              View all projects
+            </a>
+          </div>
+
+          <div id="projectsGrid" class="row g-3"></div>
+        </section>
+
+        <!-- WRITING -->
+        <section id="writing" class="container section">
+          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+            <div>
+              <h2 class="section-title">Writing</h2>
+              <p class="section-subtitle">Notes on engineering trade-offs, reliability, and system design.</p>
+            </div>
+            <a class="btn btn-ghost" href="writing.html" aria-label="View all writing">
+              View all writing
+            </a>
+          </div>
+
+          <div class="glass-card p-4">
+            <div id="writingList" class="list-clean d-grid gap-3"></div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="container section">
+          <div class="mb-3">
+            <h2 class="section-title">Reachable Here</h2>
+            <p class="section-subtitle">Say Hi !!</p>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-12 col-lg-7">
+              <div class="glass-card p-4">
+                <div class="d-flex flex-column gap-3">
+                  <div>
+                    <div class="meta mb-1">Email</div>
+                    <a class="fw-bold" href="mailto:ankit.maurya01@zohomail.in">ankit.maurya01@zohomail.in</a>
+                  </div>
+                  <div>
+                    <div class="meta mb-1">GitHub</div>
+                    <a class="fw-bold" href="https://github.com/AnkitKiet" target="_blank" rel="noopener">github.com/AnkitKiet</a>
+                  </div>
+                  <div>
+                    <div class="meta mb-1">LinkedIn</div>
+                    <a class="fw-bold" href="https://www.linkedin.com/in/maurya-ankit94" target="_blank" rel="noopener">www.linkedin.com/in/maurya-ankit94                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="glass-card p-4 h-100">
+                <div class="chip mb-3">Quick note</div>
+                <p class="mb-0 text-secondary">
+                  I’m most effective on systems that need strong fundamentals, architecture thinking and complex problem solving. I love to build systems that are scalable, reliable, efficient and solving usecase at scale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <div id="siteFooter"></div>
+
+      <!-- MODALS: Engineering Learnings -->
+      <div class="modal fade" id="modalTimeline" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Career</div>
+                <h3 class="h5 fw-bold mb-0">Job timeline</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">A quick roadmap of roles and domains over time.</p>
+              <div class="glass-card p-4 p-md-5">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-year">2022 - Present</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                      <div class="fw-bold">Walmart</div>
+                      <div class="meta">Pricing &amp; fulfillment systems</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-year">2020-2022</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                      <div class="fw-bold">Global Payments</div>
+                      <div class="meta">IVR automation &amp; event-driven platforms</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-year">2018-2020</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                      <div class="fw-bold">Newgen Software</div>
+                      <div class="meta">Enterprise banking &amp; workflow systems</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-year">2017-2018</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                      <div class="fw-bold">Sports social</div>
+                      <div class="meta">(intern)</div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-year">2016-2017</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-content">
+                      <div class="fw-bold">Hobby Club</div>
+                      <div class="meta">with college</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalKafkaPartitioning" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Kafka</div>
+                <h3 class="h5 fw-bold mb-0">Partitioning is a product decision</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">
+                Partitioning determines what you can guarantee (ordering), what you can scale (parallel consumers), and where you’ll
+                feel pain (hot keys, replays, migrations).
+              </p>
+              <div class="glass-card p-3 mb-3">
+                <div class="fw-bold mb-2">What I optimize for</div>
+                <ul class="mb-0 text-secondary">
+                  <li><span class="fw-semibold">Stable keys</span> that align with business invariants (e.g., accountId, orderId).</li>
+                  <li><span class="fw-semibold">Hot-key mitigation</span> via bucketing, secondary routing, or load-shedding paths.</li>
+                  <li><span class="fw-semibold">Replay-safe consumers</span> with idempotency and deterministic side effects.</li>
+                </ul>
+              </div>
+              <div class="fw-bold mb-2">Trade-offs I communicate early</div>
+              <ul class="text-secondary mb-0">
+                <li><span class="fw-semibold">Ordering</span> is per-partition, not global.</li>
+                <li><span class="fw-semibold">More partitions</span> increases parallelism but raises operational overhead.</li>
+                <li><span class="fw-semibold">Key changes</span> are migrations: plan for dual-write/dual-read or re-key backfills.</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalCassandraModeling" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Cassandra</div>
+                <h3 class="h5 fw-bold mb-0">Model for reads; pay for mistakes later</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">
+                Cassandra is excellent when your queries are known and stable. It’s unforgiving when you need ad-hoc filtering or when
+                your partition strategy creates hotspots.
+              </p>
+              <div class="glass-card p-3 mb-3">
+                <div class="fw-bold mb-2">Rules of thumb that hold up</div>
+                <ul class="mb-0 text-secondary">
+                  <li><span class="fw-semibold">Design tables per access pattern</span> (denormalize intentionally).</li>
+                  <li><span class="fw-semibold">Bound partition size</span> using time buckets or sharding keys.</li>
+                  <li><span class="fw-semibold">Watch tombstones</span> (TTL, deletes, and wide rows can silently degrade reads).</li>
+                </ul>
+              </div>
+              <div class="fw-bold mb-2">Operational considerations</div>
+              <ul class="text-secondary mb-0">
+                <li>Choose compaction and TTL strategy with real traffic profiles.</li>
+                <li>Plan repairs and schema evolution as part of delivery, not after.</li>
+                <li>Prefer predictable queries over “flexible” ones that break SLOs under peak.</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalCaching" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Caching</div>
+                <h3 class="h5 fw-bold mb-0">Cache correctness is a spectrum</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">
+                “Perfect invalidation” is rarely worth it. Mature systems choose a bounded staleness model with explicit failure modes
+                and guardrails against stampedes.
+              </p>
+              <div class="glass-card p-3 mb-3">
+                <div class="fw-bold mb-2">Patterns I reach for</div>
+                <ul class="mb-0 text-secondary">
+                  <li><span class="fw-semibold">Request coalescing</span> to prevent thundering herds on hot items.</li>
+                  <li><span class="fw-semibold">Stale-while-revalidate</span> for high-read endpoints with safe freshness windows.</li>
+                  <li><span class="fw-semibold">Soft TTL + hard TTL</span> to control staleness and bound worst-case misses.</li>
+                </ul>
+              </div>
+              <div class="fw-bold mb-2">Where teams get surprised</div>
+              <ul class="text-secondary mb-0">
+                <li>Cache outages can be worse than DB outages if clients don’t degrade gracefully.</li>
+                <li>Invalidation storms are write amplification—rate limit and batch where possible.</li>
+                <li>Measure hit rate by key cohort (not just global) to find pathological traffic.</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalAsyncPipelines" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Async pipelines</div>
+                <h3 class="h5 fw-bold mb-0">Async systems need “replay safety”</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">
+                Once you introduce queues and retries, duplicate processing is normal. The goal is not preventing duplicates—it’s
+                making duplicates safe and observable.
+              </p>
+              <div class="glass-card p-3 mb-3">
+                <div class="fw-bold mb-2">Baseline design</div>
+                <ul class="mb-0 text-secondary">
+                  <li><span class="fw-semibold">Idempotency keys</span> at boundaries (API → topic, topic → DB, DB → downstream).</li>
+                  <li><span class="fw-semibold">Deterministic handlers</span> so replay produces the same side effects.</li>
+                  <li><span class="fw-semibold">Backpressure signals</span> (queue depth, lag, saturation) tied to SLOs.</li>
+                </ul>
+              </div>
+              <div class="fw-bold mb-2">Operational maturity</div>
+              <ul class="text-secondary mb-0">
+                <li>Dead-letter queues with a human workflow (reprocess, drop, or compensate).</li>
+                <li>Replay tooling that’s safe by default (rate-limited, scoped, and auditable).</li>
+                <li>Retries tuned by failure domain (timeouts vs. validation vs. downstream limits).</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalSLOs" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Reliability</div>
+                <h3 class="h5 fw-bold mb-0">SLOs prevent “alert-driven” engineering</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">
+                Mature teams don’t chase every spike. They define user-visible success and allocate engineering time with error budgets.
+              </p>
+              <div class="glass-card p-3 mb-3">
+                <div class="fw-bold mb-2">What works in practice</div>
+                <ul class="mb-0 text-secondary">
+                  <li><span class="fw-semibold">Define SLIs</span> users care about (success rate, latency, freshness).</li>
+                  <li><span class="fw-semibold">Map alerts</span> to actions (who responds, what changes, and what’s the playbook).</li>
+                  <li><span class="fw-semibold">Use budgets</span> to decide when to pause feature work and pay down reliability debt.</li>
+                </ul>
+              </div>
+              <div class="fw-bold mb-2">Avoid these traps</div>
+              <ul class="text-secondary mb-0">
+                <li>Alerting on symptoms without context (CPU high) instead of impact (requests failing).</li>
+                <li>Dashboards without ownership—every chart should answer a question.</li>
+                <li>“One size fits all” thresholds—different endpoints have different risk profiles.</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalDataConsistency" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Data consistency</div>
+                <h3 class="h5 fw-bold mb-0">Consistency is a workflow, not a toggle</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">
+                Distributed systems drift. The safest approach is designing for detection and repair: invariants, audits, and
+                reconciliation loops.
+              </p>
+              <div class="glass-card p-3 mb-3">
+                <div class="fw-bold mb-2">Practical toolkit</div>
+                <ul class="mb-0 text-secondary">
+                  <li><span class="fw-semibold">Invariants</span> (e.g., totals, monotonic states) that can be verified continuously.</li>
+                  <li><span class="fw-semibold">Audit logs</span> that allow replay and explainability during incidents.</li>
+                  <li><span class="fw-semibold">Reconciliation</span> jobs that repair missed writes and correct drift safely.</li>
+                </ul>
+              </div>
+              <div class="fw-bold mb-2">Trade-offs I make explicit</div>
+              <ul class="text-secondary mb-0">
+                <li>When strong consistency is required, constrain scope and keep failure domains small.</li>
+                <li>For eventual consistency, define freshness windows and user expectations clearly.</li>
+                <li>Prefer safe, observable compensations over hidden “best effort” behaviors.</li>
+              </ul>
+            </div>
+            <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALS: Papers + Projects (rendered by JS) -->
+    <div id="papersModals"></div>
+    <div id="projectsModals"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/papers.js"></script>
+    <script src="assets/projects.js"></script>
+    <script src="assets/writing.js"></script>
+    <script src="assets/layout.js" defer></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
+
