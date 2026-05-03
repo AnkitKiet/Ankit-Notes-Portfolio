@@ -93,9 +93,9 @@
               </div>
 
               <div class="d-flex flex-wrap gap-2 mt-4">
-                <a class="btn btn-primary btn-lg px-4" href="resume.pdf" target="_blank" rel="noopener">
+                <button class="btn btn-primary btn-lg px-4" type="button" data-bs-toggle="modal" data-bs-target="#modalResume" aria-haspopup="dialog" aria-controls="modalResume">
                   Resume
-                </a>
+                </button>
                 <button class="btn btn-ghost btn-lg px-4" type="button" data-bs-toggle="modal" data-bs-target="#modalTimeline">
                   Job timeline
                 </button>
@@ -131,16 +131,18 @@
 
         <!-- LEARNINGS (MOST IMPORTANT) -->
         <section id="learnings" class="container section">
-          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
-            <div>
-              <h2 class="section-title">Engineering learnings from production</h2>
-              <p class="section-subtitle">
-                These insights are drawn from my production experience shaped by working alongside some of the best engineering minds in the industry.
-              </p>
+          <div class="section-head-sticky">
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+              <div>
+                <h2 class="section-title">Engineering learnings from production</h2>
+                <p class="section-subtitle">
+                  These insights are drawn from my production experience shaped by working alongside some of the best engineering minds in the industry.
+                </p>
+              </div>
+              <a class="btn btn-ghost" href="learnings.html" aria-label="View all learnings (future page)">
+                View all learnings
+              </a>
             </div>
-            <a class="btn btn-ghost" href="learnings.html" aria-label="View all learnings (future page)">
-              View all learnings
-            </a>
           </div>
 
           <div class="row g-3">
@@ -274,16 +276,18 @@
 
         <!-- RESEARCH PAPERS -->
         <section id="papers" class="container section">
-          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
-            <div>
-              <h2 class="section-title">Research papers I read</h2>
-              <p class="section-subtitle">
-                Papers that have shaped my understanding of distributed systems and AI.
-              </p>
+          <div class="section-head-sticky">
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+              <div>
+                <h2 class="section-title">Research papers I read</h2>
+                <p class="section-subtitle">
+                  Papers that have shaped my understanding of distributed systems and AI.
+                </p>
+              </div>
+              <a class="btn btn-ghost" href="papers.html" aria-label="View all research papers">
+                View all papers
+              </a>
             </div>
-            <a class="btn btn-ghost" href="papers.html" aria-label="View all research papers">
-              View all papers
-            </a>
           </div>
 
           <div id="papersGrid" class="row g-3"></div>
@@ -291,16 +295,18 @@
 
         <!-- PROJECTS / SYSTEMS -->
         <section id="projects" class="container section">
-          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
-            <div>
-              <h2 class="section-title">Projects &amp; systems</h2>
-              <p class="section-subtitle">
-                Learning Projects to understand distributed systems and AI.
-              </p>
+          <div class="section-head-sticky">
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+              <div>
+                <h2 class="section-title">Learning Projects</h2>
+                <p class="section-subtitle">
+                  POCs to understand distributed systems and AI.
+                </p>
+              </div>
+              <a class="btn btn-ghost" href="projects.html" aria-label="View all projects and systems">
+                View all projects
+              </a>
             </div>
-            <a class="btn btn-ghost" href="projects.html" aria-label="View all projects and systems">
-              View all projects
-            </a>
           </div>
 
           <div id="projectsGrid" class="row g-3"></div>
@@ -308,14 +314,16 @@
 
         <!-- WRITING -->
         <section id="writing" class="container section">
-          <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
-            <div>
-              <h2 class="section-title">Writing</h2>
-              <p class="section-subtitle">Notes on engineering trade-offs, reliability, and system design.</p>
+          <div class="section-head-sticky">
+            <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+              <div>
+                <h2 class="section-title">Writing</h2>
+                <p class="section-subtitle">Notes on engineering trade-offs, reliability, and system design.</p>
+              </div>
+              <a class="btn btn-ghost" href="writing.html" aria-label="View all writing">
+                View all writing
+              </a>
             </div>
-            <a class="btn btn-ghost" href="writing.html" aria-label="View all writing">
-              View all writing
-            </a>
           </div>
 
           <div class="glass-card p-4">
@@ -325,7 +333,7 @@
 
         <!-- CONTACT -->
         <section id="contact" class="container section">
-          <div class="mb-3">
+          <div class="section-head-sticky">
             <h2 class="section-title">Reachable Here</h2>
             <p class="section-subtitle">Say Hi !!</p>
           </div>
@@ -360,7 +368,7 @@
           </div>
         </section>
 
-      </main>
+      </main> 
 
       <div id="siteFooter"></div>
 
@@ -427,6 +435,38 @@
               </div>
             </div>
             <div class="modal-footer border-0">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalResume" tabindex="-1" aria-labelledby="modalResumeTitle" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div>
+                <div class="chip mb-2">Profile</div>
+                <h3 class="h5 fw-bold mb-0" id="modalResumeTitle">Resume</h3>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+              <p class="text-secondary mb-3">PDF preview (uses your browser’s built-in viewer).</p>
+              <div class="glass-card resume-pdf-shell p-0 overflow-hidden">
+                <iframe
+                  id="resumePdfFrame"
+                  class="resume-pdf-frame"
+                  title="Ankit Maurya — resume PDF"
+                ></iframe>
+              </div>
+              <p class="text-secondary small mt-3 mb-0">
+                If the preview does not appear,
+                <a class="fw-semibold" href="assets/Ankit-Maurya.pdf" target="_blank" rel="noopener noreferrer">open the PDF in a new tab</a>.
+              </p>
+            </div>
+            <div class="modal-footer border-0">
+              <a class="btn btn-primary" href="assets/Ankit-Maurya.pdf" target="_blank" rel="noopener noreferrer">Open in new tab</a>
               <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
@@ -668,6 +708,7 @@
     <script src="assets/projects.js"></script>
     <script src="assets/writing.js"></script>
     <script src="assets/layout.js" defer></script>
+    <script src="assets/scroll-ui.js" defer></script>
     <script src="assets/app.js"></script>
   </body>
 </html>

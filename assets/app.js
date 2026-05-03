@@ -202,6 +202,24 @@ function renderWriting(items) {
   mountHtml("writingList", html);
 }
 
+const RESUME_PDF_URL = "assets/Ankit-Maurya.pdf";
+
+function initResumePdfModal() {
+  const modalEl = document.getElementById("modalResume");
+  const frame = document.getElementById("resumePdfFrame");
+  if (!modalEl || !frame || typeof window.bootstrap === "undefined") return;
+
+  modalEl.addEventListener("shown.bs.modal", () => {
+    if (!frame.getAttribute("src")) {
+      frame.src = RESUME_PDF_URL;
+    }
+  });
+
+  modalEl.addEventListener("hidden.bs.modal", () => {
+    frame.removeAttribute("src");
+  });
+}
+
 function main() {
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
@@ -216,6 +234,8 @@ function main() {
   renderPapers(isHome ? papers.slice(0, 2) : papers);
   renderProjects(isHome ? projects.slice(0, 6) : projects);
   renderWriting(isHome ? writing.slice(0, 4) : writing);
+
+  initResumePdfModal();
 
   // Keyboard accessibility for all modal cards (learnings + generated sections)
   initKeyboardClick(".learning-card, .js-modal-card");
