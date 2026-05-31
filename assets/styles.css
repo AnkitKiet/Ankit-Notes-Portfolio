@@ -597,3 +597,235 @@ body {
     transform: none;
   }
 }
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle-btn .icon-sun {
+  display: none;
+}
+
+/* =========================================
+   Developer Mode (Terminal Theme) Overrides
+   ========================================= */
+html[data-theme="terminal"] {
+  --bg0: #0B0B0B;
+  --bg1: #000000;
+  --ink: #FFFFFF;
+  --muted: #8E8E93;
+  --muted2: #8E8E93;
+  --brand: #E97171;
+  --brand2: #FFA3A3;
+
+  --card: #000000;
+  --stroke: #1C1C1E;
+  --stroke-strong: #1C1C1E;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --shadow-soft: none;
+  --shadow-float: 0 8px 25px rgba(0, 0, 0, 0.6);
+  --radius: 0px;
+
+  --bar-glass-bg: #0B0B0B;
+  --bar-glass-border: 1px solid #1C1C1E;
+  --bar-glass-blur: 0px;
+  --bar-glass-radius: 0px;
+  --bar-glass-shadow: none;
+}
+
+html[data-theme="terminal"] body {
+  font-family: "Fira Code", "JetBrains Mono", "Courier New", Courier, monospace !important;
+  background: var(--bg0) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="terminal"] .blob {
+  display: none !important;
+}
+
+html[data-theme="terminal"] .theme-toggle-btn {
+  border-radius: 50% !important; /* Keep it round in dev mode */
+}
+
+html[data-theme="terminal"] .theme-toggle-btn .icon-moon {
+  display: none;
+}
+
+html[data-theme="terminal"] .theme-toggle-btn .icon-sun {
+  display: block;
+}
+
+/* Component Overrides & De-Glassmorphism */
+html[data-theme="terminal"] .glass-card,
+html[data-theme="terminal"] .nav-glass,
+html[data-theme="terminal"] .section-head-sticky,
+html[data-theme="terminal"] .kicker,
+html[data-theme="terminal"] .modal-content,
+html[data-theme="terminal"] .nav-toggler-glass {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: var(--bg0) !important;
+  border: 1px solid var(--stroke) !important;
+  border-radius: 0 !important;
+  box-shadow: var(--shadow) !important;
+}
+
+html[data-theme="terminal"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23e0e0e0' stroke-linecap='round' stroke-miterlimit='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+html[data-theme="terminal"] .timeline {
+  padding-left: 0;
+}
+
+html[data-theme="terminal"] .timeline::before {
+  display: none;
+}
+
+html[data-theme="terminal"] .timeline-item {
+  display: block;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--stroke);
+  padding-left: 1rem;
+}
+
+html[data-theme="terminal"] .timeline-dot {
+  display: none;
+}
+
+html[data-theme="terminal"] .timeline-year {
+  color: var(--brand) !important;
+  margin-bottom: 0.25rem;
+}
+
+html[data-theme="terminal"] .timeline-year::before {
+  content: "> ";
+  color: var(--ink);
+}
+
+/* Terminal Progress Bar styles mapping chronologically */
+html[data-theme="terminal"] .timeline-item:nth-child(1) .timeline-year::after { content: " [██████████] active"; color: var(--brand); font-weight: normal; margin-left: 0.5rem; }
+html[data-theme="terminal"] .timeline-item:nth-child(2) .timeline-year::after { content: " [████████░░] done"; color: var(--muted); font-weight: normal; margin-left: 0.5rem; }
+html[data-theme="terminal"] .timeline-item:nth-child(3) .timeline-year::after { content: " [██████░░░░] done"; color: var(--muted); font-weight: normal; margin-left: 0.5rem; }
+html[data-theme="terminal"] .timeline-item:nth-child(4) .timeline-year::after { content: " [████░░░░░░] done"; color: var(--muted); font-weight: normal; margin-left: 0.5rem; }
+html[data-theme="terminal"] .timeline-item:nth-child(5) .timeline-year::after { content: " [██░░░░░░░░] done"; color: var(--muted); font-weight: normal; margin-left: 0.5rem; }
+
+html[data-theme="terminal"] .timeline-content {
+  padding-left: 1.25rem;
+}
+
+html[data-theme="terminal"] .btn-primary,
+html[data-theme="terminal"] .btn-ghost {
+  border-radius: 0 !important;
+  font-family: monospace;
+  text-transform: uppercase;
+  background: var(--bg0) !important;
+  border: 1px solid var(--brand) !important;
+  color: var(--brand) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html[data-theme="terminal"] .btn-primary:hover,
+html[data-theme="terminal"] .btn-ghost:hover {
+  background: var(--brand) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(233, 113, 113, 0.3) !important;
+}
+
+html[data-theme="terminal"] .grad-text,
+html[data-theme="terminal"] .section-head-sticky .section-title,
+html[data-theme="terminal"] .section-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  color: var(--brand) !important;
+  -webkit-text-fill-color: var(--brand) !important;
+}
+
+html[data-theme="terminal"] .hover-lift:hover {
+  transform: none !important;
+  box-shadow: var(--shadow-float) !important;
+}
+
+html[data-theme="terminal"] .chip {
+  background: var(--brand2);
+  border: 1px solid var(--brand2);
+  color: #000000;
+  border-radius: 0;
+}
+
+/* Fix hardcoded dark text colors in Developer Mode */
+html[data-theme="terminal"] .list-clean a,
+html[data-theme="terminal"] a.fw-bold,
+html[data-theme="terminal"] a.fw-semibold {
+  color: var(--ink) !important;
+}
+
+html[data-theme="terminal"] .list-clean a:hover,
+html[data-theme="terminal"] a.fw-bold:hover,
+html[data-theme="terminal"] a.fw-semibold:hover {
+  color: var(--brand) !important;
+}
+
+html[data-theme="terminal"] .section-head-sticky .section-subtitle,
+html[data-theme="terminal"] .kicker,
+html[data-theme="terminal"] .timeline-year,
+html[data-theme="terminal"] .nav-pill .nav-link {
+  color: var(--muted) !important;
+}
+
+html[data-theme="terminal"] .nav-pill .nav-link:hover,
+html[data-theme="terminal"] .nav-pill .nav-link.active {
+  color: var(--ink) !important;
+}
+
+/* Terminal Status Badge */
+.dev-status-badge {
+  display: none;
+}
+
+html[data-theme="terminal"] .dev-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  font-weight: normal;
+  color: #00ff00;
+  margin-left: 0.75rem;
+  vertical-align: middle;
+  letter-spacing: normal;
+}
+
+html[data-theme="terminal"] .dev-status-badge .status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff00;
+  animation: blink 2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Terminal Scroll Progress */
+html[data-theme="terminal"] .scroll-progress-fixed {
+  background: var(--bg1) !important;
+}
+
+html[data-theme="terminal"] .scroll-progress-fill {
+  background: var(--brand) !important;
+  box-shadow: 0 0 10px var(--brand) !important;
+  border-radius: 0 !important;
+}
